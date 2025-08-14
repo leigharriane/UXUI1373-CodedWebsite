@@ -197,7 +197,8 @@ button p {
 
 .aboutTitle,
 .whyItMattersTitle,
-.storiesTitle {
+.storiesTitle,
+.howYouCanHelpTitle {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -214,7 +215,8 @@ button p {
 
 .aboutTitle p,
 .whyItMattersTitle p,
-.storiesTitle p {
+.storiesTitle p,
+.howYouCanHelpTitle p {
   color: #8d8d8d;
   font-size: 20px;
   font-weight: 600;
@@ -224,7 +226,8 @@ button p {
 
 .aboutContent .title,
 .whyItMatters .title,
-.stories .title {
+.stories .title,
+.howYouCanHelp .title {
   color: #171717;
   font-size: 40px;
   font-weight: 700;
@@ -234,7 +237,8 @@ button p {
 
 .aboutContent .description,
 .whyItMatters .description,
-.stories .description {
+.stories .description,
+.howYouCanHelp .description {
   color: #8d8d8d;
   font-size: 20px;
   font-style: normal;
@@ -248,6 +252,14 @@ button p {
 .stories mark {
   color: #00854c;
   background-color: transparent;
+}
+
+.titleDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 /* About Us Styles */
@@ -330,14 +342,6 @@ button p {
   gap: 40px;
   width: 100%;
   align-items: center;
-}
-
-.titleDescription {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  text-align: center;
 }
 
 .statistics {
@@ -521,4 +525,80 @@ button p {
   gap: 10px;
   border-radius: 100px;
   background: #00854c;
+}
+
+/* How to Help Styles */
+
+.howYouCanHelp {
+  margin-top: 60px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.howYouCanHelpContent {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
+
+.howYouCanHelpContentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.howYouCanHelpCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+}
+
+.cardTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.cardChips {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cardChips p {
+  border-radius: 50px;
+  background: #207952;
+  display: flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: -0.44px;
+  color: #fafafa;
+}
+.cardTitle {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.688px;
+}
+
+.cardDesc {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  color: #8d8d8d;
 }
