@@ -1,18 +1,21 @@
 /* Font */
+/* General element styles */
 @font-face {
   font-family: "NB International Pro Medium";
   src: local("NB International Pro Medium"),
     url("/font/NB-International-Pro/NB-Medium.ttf") format("truetype");
-  font-weight: medium;
+  font-weight: 500;
 }
 
 /* Basic Reset */
+/* General element styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* General element styles */
 body {
   font-family: "NB International Pro Medium", sans-serif;
   line-height: 1.6;
@@ -22,6 +25,7 @@ body {
 }
 
 header,
+/* Footer styles */
 footer {
   /* background-color: #222; */
   color: #fff;
@@ -29,21 +33,25 @@ footer {
   padding: 1rem;
 }
 
+/* General element styles */
 main {
   padding: 0rem;
 }
 
 .hero,
 .features,
+/* General element styles */
 .cta {
   margin-bottom: 2rem;
 }
 
 div,
+/* General element styles */
 p {
   transition-duration: 0.3s;
 }
 
+/* General element styles */
 a {
   text-decoration: none;
   transition-duration: 0.3s;
@@ -52,22 +60,26 @@ a {
 a:link,
 a:visited,
 a:hover,
+/* General element styles */
 a:active {
-  color: inherit; /* Inherits color from parent element */
-  text-decoration: none; /* Removes underline */
+  color: inherit;
+  text-decoration: none;
 }
 
+/* General element styles */
 button {
   border: 0px;
   cursor: pointer;
   transition-duration: 0.3s;
 }
 
+/* General element styles */
 svg {
   transition-duration: 0.3s;
 }
 
 /* Header Styles */
+/* Header / Navigation styles */
 header {
   z-index: 2;
   background: #fafafa;
@@ -82,65 +94,85 @@ header {
 
 /* Navigation Styles */
 
+/* Header / Navigation styles */
 nav {
   width: 100%;
-  padding: 16px, 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
+/* General element styles */
 .logo {
   color: var(--Green-Default, #00854c);
   font-weight: 700;
   letter-spacing: -0.1rem;
   display: flex;
   flex-direction: column;
-  gap: -2px;
+  gap: 0px;
   line-height: normal;
 }
 
+/* General element styles */
+.logo .stray {
+  transform: translateY(1px);
+}
+
+/* General element styles */
+.logo .no-more {
+  transform: translateY(-1px);
+}
+
+/* General element styles */
 .logo .stray {
   font-size: 28px;
 }
 
+/* General element styles */
 .logo .no-more {
   margin-top: -6px;
   font-size: 20px;
 }
 
+/* Header / Navigation styles */
 .navLinks {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* Header / Navigation styles */
 .navLinks a {
   text-decoration: none;
   color: #171717;
 }
 
-.navButton a {
+/* Header / Navigation styles */
+.navButton {
   color: #fafafa;
   border-radius: 50px;
-  padding: 10px 12px;
+  padding: 6px 12px;
   background-color: #00854c;
   font-size: 16px;
 }
 
-.navButton a:hover {
+/* Header / Navigation styles */
+.navButton:hover {
   background-color: #fafafa;
   color: #00854c;
   outline: 0.5px solid #00854c;
 }
 
+/* Header / Navigation styles */
 /* nav button {
   border: 0px;
 } */
 
 /* Hero Styles */
 
+/* Hero section styles */
 .hero {
   margin-top: 75px;
   padding: 20px 50px 0 50px;
@@ -148,6 +180,7 @@ nav {
   max-height: 580px;
 }
 
+/* Hero section styles */
 .hero img {
   width: 100%;
   height: 100%;
@@ -156,6 +189,7 @@ nav {
   border-radius: 30px;
 }
 
+/* Hero section styles */
 .hero .bigText {
   /* position: absolute;
   bottom: -75px; */
@@ -171,6 +205,7 @@ nav {
   text-align: center;
 }
 
+/* Hero section styles */
 .hero .textButtonElement {
   font-size: 20px;
   margin-top: -28vw;
@@ -182,6 +217,7 @@ nav {
   padding-right: 2%;
 }
 
+/* Hero section styles */
 .hero .smallerText {
   max-width: 380px;
   color: #fafafa;
@@ -190,12 +226,14 @@ nav {
 }
 
 button p,
+/* General element styles */
 .btnAction p {
   width: 100%;
   text-align: center;
 }
 
 .hero button,
+/* Hero section styles */
 .hero .btnAction {
   max-width: 380px;
   display: flex;
@@ -214,21 +252,25 @@ button p,
 }
 
 .hero button:hover,
+/* Hero section styles */
 .hero .btnAction:hover {
   background: #fafafa;
   color: #00854c;
 }
 
 .hero button:hover .arrow,
+/* Hero section styles */
 .hero .btnAction:hover .arrow {
   background-color: #00854c;
 }
 
 .hero button:hover svg,
+/* Hero section styles */
 .hero .btnAction:hover svg {
   fill: #fafafa;
 }
 
+/* Hero section styles */
 .hero .arrow {
   border-radius: 100px;
   background: #fafafa;
@@ -236,6 +278,7 @@ button p,
   border: 0px;
 }
 
+/* Hero section styles */
 .hero svg {
   fill: #00854c;
   display: flex;
@@ -250,6 +293,7 @@ button p,
 .whyItMattersTitle,
 .storiesTitle,
 .howYouCanHelpTitle,
+/* Contact section styles */
 .contactTitle {
   display: flex;
   flex-direction: row;
@@ -257,6 +301,7 @@ button p,
   align-items: center;
 }
 
+/* General element styles */
 .greenDot {
   width: 12px;
   height: 12px;
@@ -269,6 +314,7 @@ button p,
 .whyItMattersTitle p,
 .storiesTitle p,
 .howYouCanHelpTitle p,
+/* Contact section styles */
 .contactTitle p {
   color: #8d8d8d;
   font-size: 20px;
@@ -281,6 +327,7 @@ button p,
 .whyItMatters .title,
 .stories .title,
 .howYouCanHelp .title,
+/* Contact section styles */
 .contact .title {
   color: #171717;
   font-size: 40px;
@@ -293,6 +340,7 @@ button p,
 .whyItMatters .description,
 .stories .description,
 .howYouCanHelp .description,
+/* Contact section styles */
 .contact .description {
   color: #8d8d8d;
   font-size: 20px;
@@ -304,11 +352,13 @@ button p,
 
 .aboutContentLeft mark,
 .whyItMatters mark,
+/* Stories section styles */
 .stories mark {
   color: #00854c;
   background-color: transparent;
 }
 
+/* General element styles */
 .titleDescription {
   display: flex;
   flex-direction: column;
@@ -319,6 +369,7 @@ button p,
 
 /* About Us Styles */
 
+/* About section styles */
 .aboutUs {
   margin-top: 20vw;
   padding: 0 50px;
@@ -328,12 +379,14 @@ button p,
   width: 100%;
 }
 
+/* About section styles */
 .aboutContent {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* About section styles */
 .aboutContentLeft {
   display: flex;
   flex-direction: column;
@@ -341,6 +394,7 @@ button p,
   width: 40%;
 }
 
+/* About section styles */
 .aboutContentRight {
   width: 60%;
   display: flex;
@@ -349,10 +403,12 @@ button p,
 }
 
 .aboutContentRight .innerLeft,
+/* General element styles */
 .innerRight {
   width: 100%;
 }
 
+/* About section styles */
 .aboutContentRight .card {
   display: flex;
   flex-direction: column;
@@ -363,6 +419,7 @@ button p,
   border-radius: 20px;
 }
 
+/* About section styles */
 .aboutContentRight .card .title {
   font-size: 24px;
   font-style: normal;
@@ -372,6 +429,7 @@ button p,
   color: #171717;
 }
 
+/* About section styles */
 .aboutContentRight .card p {
   font-size: 17px;
   font-style: normal;
@@ -381,6 +439,7 @@ button p,
   color: #8d8d8d;
 }
 
+/* General element styles */
 .innerRight {
   display: flex;
   flex-direction: column;
@@ -389,6 +448,7 @@ button p,
 
 /* Why It Matters  */
 
+/* 'Why It Matters' section styles */
 .whyItMatters {
   margin-top: 60px;
   padding: 60px 0;
@@ -399,6 +459,7 @@ button p,
   align-items: center;
 }
 
+/* General element styles */
 .statistics {
   display: flex;
   flex-direction: row;
@@ -407,6 +468,7 @@ button p,
   gap: 14px;
 }
 
+/* General element styles */
 .statisticsCol {
   display: flex;
   flex-direction: column;
@@ -417,6 +479,7 @@ button p,
   min-width: 210px;
 }
 
+/* General element styles */
 .statisticsCol img {
   width: 100%;
   height: 50%;
@@ -424,6 +487,7 @@ button p,
   object-fit: cover;
 }
 
+/* General element styles */
 .stats {
   padding: 20px;
   border-radius: 20px;
@@ -435,6 +499,7 @@ button p,
   /* border: 2px solid black; */
 }
 
+/* General element styles */
 .stats .number {
   font-size: 40px;
   font-style: normal;
@@ -444,6 +509,7 @@ button p,
   width: 100%;
 }
 
+/* General element styles */
 .stats .text {
   font-size: 22px;
   font-style: normal;
@@ -453,33 +519,40 @@ button p,
   width: 100%;
 }
 
+/* General element styles */
 .color1 {
   background-color: #2d8d63;
 }
 
+/* General element styles */
 .color2 {
   background-color: #5abe93;
 }
 
+/* General element styles */
 .color3 {
   background-color: #0c4b30;
   height: 100%;
 }
 
+/* General element styles */
 .color4 {
   background-color: #3ba074;
 }
 
+/* General element styles */
 .color5 {
   background-color: #156341;
 }
 
+/* General element styles */
 .color6 {
   background-color: #5abe93;
 }
 
 /* Stories Styles */
 
+/* Stories section styles */
 .stories {
   margin-top: 60px;
   padding: 60px 50px;
@@ -489,12 +562,14 @@ button p,
   width: 100%;
 }
 
+/* Stories section styles */
 .storiesContent {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* Stories section styles */
 .storiesContentLeft {
   display: flex;
   flex-direction: column;
@@ -504,6 +579,7 @@ button p,
   z-index: 1;
 }
 
+/* Stories section styles */
 .storiesContentLeft .arrows {
   display: flex;
   flex-direction: row;
@@ -512,6 +588,7 @@ button p,
   margin-top: 100px;
 }
 
+/* Stories section styles */
 .storiesContentLeft .arrow {
   border-radius: 50px;
   border: 1px solid #171717;
@@ -521,18 +598,22 @@ button p,
   cursor: pointer;
 }
 
+/* Stories section styles */
 .storiesContentLeft .arrow svg {
   fill: #171717;
 }
 
+/* Stories section styles */
 .storiesContentLeft .arrow:hover {
   background: #171717;
 }
 
+/* Stories section styles */
 .storiesContentLeft .arrow:hover svg {
   fill: #fafafa;
 }
 
+/* Stories section styles */
 .storyCard {
   width: 100%;
   display: flex;
@@ -542,6 +623,7 @@ button p,
   min-width: 350px;
 }
 
+/* Stories section styles */
 .storyCard img {
   width: 100%;
   object-fit: cover;
@@ -549,6 +631,7 @@ button p,
   max-height: 237px;
 }
 
+/* Stories section styles */
 .storiesContentRight {
   width: 60%;
   display: flex;
@@ -556,6 +639,7 @@ button p,
   gap: 14px;
 }
 
+/* Stories section styles */
 .story {
   display: flex;
   flex-direction: column;
@@ -568,6 +652,7 @@ button p,
   color: #171717;
 }
 
+/* Stories section styles */
 .readStory {
   display: flex;
   flex-direction: row;
@@ -581,7 +666,8 @@ button p,
   align-items: center;
 }
 
-.readStory p {
+/* Stories section styles */
+.readStory span {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -590,6 +676,7 @@ button p,
   color: #00854c;
 }
 
+/* Stories section styles */
 .readStoryArrow {
   display: flex;
   padding: 8px;
@@ -599,28 +686,34 @@ button p,
   background: #00854c;
 }
 
+/* Stories section styles */
 .readStoryArrow svg {
   fill: #fafafa;
 }
 
+/* Stories section styles */
 .readStory:hover {
   background: #00854c;
 }
 
-.readStory:hover p {
+/* Stories section styles */
+.readStory:hover span {
   color: #fafafa;
 }
 
+/* Stories section styles */
 .readStory:hover .readStoryArrow {
   background-color: #fafafa;
 }
 
+/* Stories section styles */
 .readStory:hover .readStoryArrow svg {
   fill: #00854c;
 }
 
 /* How to Help Styles */
 
+/* 'How You Can Help' section styles */
 .howYouCanHelp {
   margin-top: 60px;
   padding: 0 50px;
@@ -630,6 +723,7 @@ button p,
   width: 100%;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpContent {
   display: flex;
   flex-direction: row;
@@ -637,6 +731,7 @@ button p,
   width: 100%;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpCol {
   display: flex;
   flex-direction: column;
@@ -644,6 +739,7 @@ button p,
   gap: 40px;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpCard {
   display: flex;
   flex-direction: column;
@@ -653,20 +749,24 @@ button p,
   cursor: pointer;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpCard:hover {
   background-color: #00854c;
   color: #fafafa;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpCard:hover .cardChips p {
   background: #fafafa;
   color: #00854c;
 }
 
+/* 'How You Can Help' section styles */
 .howYouCanHelpCard:hover .cardDesc {
   color: #bababa;
 }
 
+/* General element styles */
 .cardTexts {
   display: flex;
   flex-direction: column;
@@ -674,12 +774,14 @@ button p,
   padding: 20px;
 }
 
+/* General element styles */
 .cardChips {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
+/* General element styles */
 .cardChips p {
   border-radius: 50px;
   background: #207952;
@@ -693,6 +795,7 @@ button p,
   color: #fafafa;
 }
 
+/* General element styles */
 .cardTitle {
   font-size: 32px;
   font-style: normal;
@@ -701,6 +804,7 @@ button p,
   letter-spacing: -0.688px;
 }
 
+/* General element styles */
 .cardDesc {
   font-size: 20px;
   font-style: normal;
@@ -710,6 +814,7 @@ button p,
   color: #8d8d8d;
 }
 
+/* General element styles */
 .cardImg {
   width: 100%;
   height: 250px;
@@ -718,6 +823,7 @@ button p,
   justify-content: end;
 }
 
+/* General element styles */
 .cardImg img {
   width: 100%;
   height: 100%;
@@ -725,6 +831,7 @@ button p,
   border-radius: 20px;
 }
 
+/* General element styles */
 .cardImg .cardArrow {
   max-width: 50px;
   position: absolute;
@@ -737,6 +844,7 @@ button p,
   margin-right: 16px;
 }
 
+/* General element styles */
 .cardImg .try {
   padding-top: 50px;
   margin-top: 50px;
@@ -745,6 +853,7 @@ button p,
 
 /* Contact Us Styles */
 
+/* Contact section styles */
 .contact {
   margin-top: 60px;
   padding: 0 50px;
@@ -754,12 +863,14 @@ button p,
   width: 100%;
 }
 
+/* Contact section styles */
 .contactContent {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* Contact section styles */
 .contactContentLeft {
   display: flex;
   flex-direction: column;
@@ -767,6 +878,7 @@ button p,
   width: 40%;
 }
 
+/* Contact section styles */
 .contactContentRight {
   width: 60%;
   display: flex;
@@ -775,6 +887,7 @@ button p,
 }
 
 .chatWithUs,
+/* General element styles */
 .business {
   display: flex;
   flex-direction: column;
@@ -784,6 +897,7 @@ button p,
   text-align: start;
 }
 
+/* General element styles */
 .socials {
   display: flex;
   flex-direction: column;
@@ -794,6 +908,7 @@ button p,
 }
 
 .chatWithUs .title,
+/* General element styles */
 .socialsNBusiness .title {
   color: #171717;
   font-size: 32px;
@@ -803,6 +918,7 @@ button p,
 }
 
 .chatWithUs .details,
+/* General element styles */
 .socialsNBusiness .details {
   display: flex;
   flex-direction: column;
@@ -812,6 +928,7 @@ button p,
 }
 
 .chatWithUs .details p,
+/* General element styles */
 .socialsNBusiness .details p {
   color: #8d8d8d;
   font-size: 20px;
@@ -822,6 +939,7 @@ button p,
 }
 
 .chatWithUs .details a,
+/* General element styles */
 .socialsNBusiness .details a {
   font-size: 18px;
   font-style: normal;
@@ -831,12 +949,14 @@ button p,
   /* text-decoration-line: underline; */
 }
 
+/* General element styles */
 .socialsNBusiness {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* Contact section styles */
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -844,6 +964,7 @@ button p,
   width: 100%;
 }
 
+/* General element styles */
 .formRow {
   display: flex;
   flex-direction: row;
@@ -851,6 +972,7 @@ button p,
   width: 100%;
 }
 
+/* General element styles */
 .inputGap {
   display: flex;
   flex-direction: column;
@@ -859,6 +981,7 @@ button p,
   width: 100%;
 }
 
+/* General element styles */
 label {
   font-size: 18px;
   font-style: normal;
@@ -871,6 +994,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+/* General element styles */
 textarea {
   border-radius: 20px;
   border: 1px solid #171717;
@@ -886,10 +1010,12 @@ textarea {
   font-family: "NB International Pro Medium", sans-serif;
 }
 
+/* General element styles */
 textarea {
   resize: none;
 }
 
+/* General element styles */
 .formButton {
   display: flex;
   padding: 18px 22px;
@@ -902,12 +1028,14 @@ textarea {
   width: 100%;
 }
 
+/* General element styles */
 .formButton:hover {
   background-color: #fafafa;
   color: #00854c;
   outline: 1px solid #00854c;
 }
 
+/* Footer styles */
 footer {
   margin-top: 60px;
   width: 100%;
@@ -919,6 +1047,7 @@ footer {
   justify-content: end;
 }
 
+/* Footer styles */
 .innerFooter {
   padding: 40px;
   width: 100%;
@@ -933,6 +1062,7 @@ footer {
   z-index: 1;
 }
 
+/* Footer styles */
 .topFooter {
   display: flex;
   flex-direction: row;
@@ -940,6 +1070,7 @@ footer {
   gap: 40px;
 }
 
+/* General element styles */
 .topLeft {
   display: flex;
   flex-direction: column;
@@ -949,6 +1080,7 @@ footer {
   width: 70%;
 }
 
+/* General element styles */
 .topLeft .title {
   font-size: 50px;
   font-style: normal;
@@ -957,6 +1089,7 @@ footer {
   letter-spacing: -1.343px;
 }
 
+/* General element styles */
 .topLeft .description {
   font-size: 18px;
   font-style: normal;
@@ -965,6 +1098,7 @@ footer {
   letter-spacing: -0.352px;
 }
 
+/* General element styles */
 .topRight {
   display: flex;
   flex-direction: row;
@@ -972,6 +1106,7 @@ footer {
   width: 30%;
 }
 
+/* General element styles */
 .topRight .innerLeft {
   width: 100%;
   display: flex;
@@ -981,6 +1116,7 @@ footer {
   text-align: start;
 }
 
+/* General element styles */
 .topRight .innerRight {
   width: 100%;
   display: flex;
@@ -991,6 +1127,7 @@ footer {
 }
 
 .topRight p,
+/* General element styles */
 .topRight a {
   color: var(--White, #fafafa);
   font-size: 18px;
@@ -1000,6 +1137,7 @@ footer {
   letter-spacing: -0.352px;
 }
 
+/* Contact section styles */
 .contactButton {
   display: flex;
   flex-direction: row;
@@ -1013,10 +1151,12 @@ footer {
   cursor: pointer;
 }
 
+/* Contact section styles */
 .contactButton svg {
   fill: #fafafa;
 }
 
+/* Contact section styles */
 .contactButton p {
   font-size: 22px;
   font-style: normal;
@@ -1026,6 +1166,7 @@ footer {
   color: #00854c;
 }
 
+/* Contact section styles */
 .contactArrow {
   display: flex;
   padding: 8px;
@@ -1035,28 +1176,34 @@ footer {
   background: #00854c;
 }
 
+/* Contact section styles */
 .contactButton:hover {
   background: #00854c;
 }
 
+/* Contact section styles */
 .contactButton:hover p {
   color: #fafafa;
 }
 
+/* Contact section styles */
 .contactButton:hover .contactArrow {
   background-color: #fafafa;
 }
 
+/* Contact section styles */
 .contactButton:hover .contactArrow svg {
   fill: #00854c;
 }
 
+/* Footer styles */
 .midFooter {
   height: 1px;
   width: 100%;
   background: #fafafa;
 }
 
+/* Footer styles */
 .bottomFooter {
   width: 100%;
   display: flex;
@@ -1065,10 +1212,12 @@ footer {
   align-items: center;
 }
 
+/* Footer styles */
 .bottomFooter .logo {
   color: #fafafa;
 }
 
+/* Footer styles */
 .socialsFooter {
   display: flex;
   flex-direction: row;
@@ -1076,10 +1225,12 @@ footer {
   justify-content: end;
 }
 
+/* Footer styles */
 .socialsFooter svg {
   cursor: pointer;
 }
 
+/* Footer styles */
 .outerFooter {
   position: absolute;
   width: 100%;
@@ -1096,11 +1247,13 @@ footer {
   margin-bottom: -60px;
 }
 
+/* General element styles */
 .statistics-marquee {
   overflow: hidden;
   position: relative;
 }
 
+/* General element styles */
 .statistics-content {
   position: relative;
   display: flex;
@@ -1110,19 +1263,24 @@ footer {
   flex-direction: row;
 }
 
+/* General element styles */
 @keyframes marquee {
+/* General element styles */
   0% {
     transform: translateX(0%);
   }
+/* General element styles */
   100% {
     transform: translateX(-20%);
   }
 }
 
+/* General element styles */
 .descriptionmax {
   max-width: 492px;
 }
 
+/* General element styles */
 .link-2 {
   position: relative;
   text-decoration: none;
@@ -1133,14 +1291,16 @@ footer {
 }
 
 .link-2::before,
+/* General element styles */
 .link-2::after {
   content: "";
   position: absolute;
-  background-color: #171717; /* replace with your $underlineColor */
+  background-color: #171717;
   z-index: -1;
-  height: 2px; /* replace with your $underlineHeight */
+  height: 2px;
 }
 
+/* General element styles */
 .link-2::before {
   width: 0%;
   left: 0;
@@ -1148,6 +1308,7 @@ footer {
   transition: width ease 0.4s;
 }
 
+/* General element styles */
 .link-2::after {
   width: 100%;
   left: 0;
@@ -1155,35 +1316,40 @@ footer {
   transition: all ease 0.6s;
 }
 
+/* General element styles */
 .link-2:hover::before {
   width: 100%;
 }
 
+/* General element styles */
 .link-2:hover::after {
   left: 100%;
   width: 0%;
   transition: all ease 0.2s;
 }
 
+/* General element styles */
 .link-3:hover {
   opacity: 0.5;
 }
 
 /* Modal overlay */
+/* General element styles */
 .modal {
-  display: none; 
-  position: fixed; 
+  display: none;
+  position: fixed;
   z-index: 1000;
-  padding-top: 80px; 
+  padding-top: 80px;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Modal content box */
+/* General element styles */
 .modal-content {
   background-color: #fff;
   margin: auto;
@@ -1196,22 +1362,52 @@ footer {
 }
 
 /* Close button */
+/* General element styles */
 .close {
   color: #555;
   position: absolute;
   top: 15px;
   right: 20px;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
 }
 
+/* General element styles */
 .close:hover {
   color: #000;
 }
 
 /* Animation */
+
+/* General element styles */
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+/* General element styles */
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+/* General element styles */
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header / Navigation styles */
+.navLinks a:hover {
+  opacity: 0.5;
+}
+
+/* General element styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

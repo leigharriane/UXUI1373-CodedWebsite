@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta & responsive basics -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO-friendly title -->
     <title>Stray No More - Rescue. Rehome. Restore.</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
+    <!-- ===================== HEADER & NAVIGATION ===================== -->
     <header>
       <!-- <h1>Welcome to My Landing Page</h1> -->
       <nav>
+        <!-- Brand / wordmark -->
         <div class="logo">
           <p class="stray">STRAY</p>
           <p class="no-more">NO MORE</p>
         </div>
+        <!-- Primary nav links (anchor to sections) -->
         <div class="navLinks">
           <a href="#">Home</a>
           <a href="#aboutUs">About</a>
@@ -22,14 +29,19 @@
           <a href="#stories">Stories</a>
           <a href="#howYouCanHelp">How You Can Help</a>
         </div>
-        <button class="navButton"><a href="#contact">CONTACT</a></button>
+        <!-- Header CTA -->
+        <a class="navButton" href="#contact">CONTACT</a>
       </nav>
     </header>
 
+    <!-- ===================== MAIN CONTENT ===================== -->
     <main>
+      <!-- ===================== HERO ===================== -->
       <section class="hero">
-        <!-- Hero content goes here -->
-        <img src="images/hero.jpg" alt="hero-image" />
+        <h2 class="sr-only">Hero</h2>
+        <!-- Background/hero image -->
+        <img src="images/hero.jpg" alt="hero-image">
+        <!-- Overlay headline + CTA -->
         <div>
           <p class="bigText">STRAY NO MORE</p>
           <div class="textButtonElement">
@@ -37,9 +49,11 @@
               Every Life Deserves a Home. Help give stray animals in the
               Philippines a second chance through adoption, rescue, or support.
             </p>
+            <!-- Scroll-to-action CTA -->
             <a class="btnAction" href="#howYouCanHelp">
               <p>TAKE ACTION</p>
               <div class="arrow">
+                <!-- CTA arrow icon -->
                 <svg
                   width="30"
                   height="30"
@@ -60,13 +74,16 @@
       </section>
 
       <section class="features">
-        <!-- Features or content blocks go here -->
+        <h2 class="sr-only">Features</h2>
+        <!-- ===================== ABOUT US ===================== -->
         <div class="aboutUs" id="aboutUs">
+          <!-- Section tag + visual marker -->
           <div class="aboutTitle">
             <div class="greenDot"></div>
             <p>ABOUT US</p>
           </div>
           <div class="aboutContent">
+            <!-- Left column: mission copy -->
             <div class="aboutContentLeft">
               <div class="title">Rescue. Rehome. Restore.</div>
               <div class="description">
@@ -76,18 +93,21 @@
                 hungry, unloved, and unseen.<mark>
                   We believe every single one deserves better.
                 </mark>
-                <br />
-                <br />
+                <br>
+                <br>
                 Our goal is a country where
                 <mark>no animal is left behind,</mark> and every dog and cat is
-                protected, seen, and loved. <br />
-                <br />
+                protected, seen, and loved. <br>
+                <br>
                 Let&apos;s make “stray” no more.
               </div>
             </div>
+            <!-- Right column: value props / feature cards -->
             <div class="aboutContentRight">
               <div class="innerLeft">
+                <!-- Card: partnerships & services -->
                 <div class="card">
+                  <!-- Icon -->
                   <svg
                     width="32"
                     height="32"
@@ -110,6 +130,7 @@
                 </div>
               </div>
               <div class="innerRight">
+                <!-- Card: advocacy & education -->
                 <div class="card">
                   <svg
                     width="32"
@@ -133,6 +154,7 @@
                     puspins
                   </p>
                 </div>
+                <!-- Card: programs & impact -->
                 <div class="card">
                   <svg
                     width="32"
@@ -160,7 +182,9 @@
           </div>
         </div>
 
+        <!-- ===================== WHY IT MATTERS ===================== -->
         <div class="whyItMatters" id="whyItMatters">
+          <!-- Section tag + headline + blurb -->
           <div class="titleDescription">
             <div class="whyItMattersTitle">
               <div class="greenDot"></div>
@@ -170,17 +194,20 @@
             <div class="description">
               Every number represents a life — vulnerable, alone, and at risk.
               <mark>
-                Understanding the magnitude <br />
+                Understanding the magnitude <br>
                 of the issue
               </mark>
               can empower us to make meaningful change.
             </div>
           </div>
+          <!-- Auto-scrolling stats band (duplicated rows for loop effect) -->
           <div class="statistics-marquee">
             <div class="statistics-content">
+              <!-- Row 1 of statistics -->
               <div class="statistics">
+                <!-- Stat block -->
                 <div class="statisticsCol">
-                  <img src="images/stats1.jpg" alt="stat-image-cat" />
+                  <img src="images/stats1.jpg" alt="stat-image-cat">
                   <div class="stats color1">
                     <div class="number">80%+</div>
                     <div class="text">
@@ -196,7 +223,7 @@
                       to high stray dog populations.
                     </div>
                   </div>
-                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat" />
+                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat">
                 </div>
                 <div class="statisticsCol">
                   <div class="stats color3">
@@ -216,10 +243,10 @@
                       disease, injury, hunger, or are euthanized.
                     </div>
                   </div>
-                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage" />
+                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage">
                 </div>
                 <div class="statisticsCol">
-                  <img src="images/stats5.jpg" alt="stat-image-cat2" />
+                  <img src="images/stats5.jpg" alt="stat-image-cat2">
                   <div class="stats color5">
                     <div class="number">12-13 Million</div>
                     <div class="text">
@@ -234,12 +261,13 @@
                       additional strays end up on the streets each year.
                     </div>
                   </div>
-                  <img src="images/stats6.jpg" alt="stat-image-dog" />
+                  <img src="images/stats6.jpg" alt="stat-image-dog">
                 </div>
               </div>
+              <!-- Row 2 duplicated for seamless marquee -->
               <div class="statistics">
                 <div class="statisticsCol">
-                  <img src="images/stats1.jpg" alt="stat-image-cat" />
+                  <img src="images/stats1.jpg" alt="stat-image-cat">
                   <div class="stats color1">
                     <div class="number">80%+</div>
                     <div class="text">
@@ -255,7 +283,7 @@
                       to high stray dog populations.
                     </div>
                   </div>
-                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat" />
+                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat">
                 </div>
                 <div class="statisticsCol">
                   <div class="stats color3">
@@ -275,10 +303,10 @@
                       disease, injury, hunger, or are euthanized.
                     </div>
                   </div>
-                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage" />
+                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage">
                 </div>
                 <div class="statisticsCol">
-                  <img src="images/stats5.jpg" alt="stat-image-cat2" />
+                  <img src="images/stats5.jpg" alt="stat-image-cat2">
                   <div class="stats color5">
                     <div class="number">12-13 Million</div>
                     <div class="text">
@@ -293,19 +321,21 @@
                       additional strays end up on the streets each year.
                     </div>
                   </div>
-                  <img src="images/stats6.jpg" alt="stat-image-dog" />
+                  <img src="images/stats6.jpg" alt="stat-image-dog">
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- ===================== STORIES SECTION ===================== -->
         <div class="stories" id="stories">
           <div class="storiesTitle">
             <div class="greenDot"></div>
             <p>STORIES OF RESCUE</p>
           </div>
           <div class="storiesContent">
+            <!-- Left: heading, description, and carousel arrows -->
             <div class="storiesContentLeft">
               <div class="title">Hope Has a Name</div>
               <div class="description descriptionmax">
@@ -314,6 +344,7 @@
                 because someone like you cared.
               </div>
               <div class="arrows">
+                <!-- Prev arrow -->
                 <div class="arrow">
                   <svg
                     width="40"
@@ -341,7 +372,8 @@
                     </defs>
                   </svg>
                 </div>
-                <div class="arrow">
+                <!-- Next arrow -->
+                <span class="arrow">
                   <svg
                     width="40"
                     height="40"
@@ -355,12 +387,13 @@
                       d="M26.1783 18.8217C26.4908 19.1343 26.6663 19.5581 26.6663 20.0001C26.6663 20.442 26.4908 20.8658 26.1783 21.1784L16.75 30.6067C16.5963 30.7659 16.4123 30.8929 16.209 30.9802C16.0057 31.0676 15.787 31.1135 15.5657 31.1155C15.3444 31.1174 15.1249 31.0752 14.9201 30.9914C14.7153 30.9076 14.5292 30.7839 14.3727 30.6274C14.2162 30.4709 14.0924 30.2848 14.0086 30.08C13.9248 29.8752 13.8827 29.6557 13.8846 29.4344C13.8865 29.2131 13.9325 28.9944 14.0198 28.791C14.1072 28.5877 14.2342 28.4038 14.3933 28.2501L22.6433 20.0001L14.3933 11.7501C14.0897 11.4357 13.9217 11.0147 13.9255 10.5777C13.9293 10.1407 14.1046 9.72271 14.4136 9.41369C14.7227 9.10468 15.1407 8.9294 15.5777 8.9256C16.0147 8.9218 16.4357 9.08979 16.75 9.39339L26.1783 18.8217Z"
                     />
                   </svg>
-                </div>
+                </span>
               </div>
             </div>
+            <!-- Right: story cards (JS can rotate, open modal, etc.) -->
             <div class="storiesContentRight">
               <div class="storyCard">
-                <img src="images/story1.jpg" alt="story-image-1" />
+                <img src="images/story1.jpg" alt="story-image-1">
                 <div class="story">
                   <div>
                     “He may be old, but he&apos;s brought new life into our
@@ -368,9 +401,11 @@
                   </div>
                   <div>Mr. & Mrs. Ramos, Adopters</div>
                 </div>
+                <!-- Opens modal / full story -->
                 <button class="readStory">
-                  <p>Read Story</p>
-                  <div class="readStoryArrow">
+                  <span>Read Story</span>
+                  <span class="readStoryArrow">
+                    <!-- Small arrow icon -->
                     <svg
                       width="20"
                       height="20"
@@ -384,11 +419,11 @@
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
               <div class="storyCard">
-                <img src="images/story2.jpg" alt="story-image-2" />
+                <img src="images/story2.jpg" alt="story-image-2">
                 <div class="story">
                   <div>
                     “I never expected to adopt, but Maya showed me how much love
@@ -397,8 +432,8 @@
                   <div>Ana L., Adopter</div>
                 </div>
                 <button class="readStory">
-                  <p>Read Story</p>
-                  <div class="readStoryArrow">
+                  <span>Read Story</span>
+                  <span class="readStoryArrow">
                     <svg
                       width="20"
                       height="20"
@@ -412,11 +447,11 @@
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
               <div class="storyCard">
-                <img src="images/story3.jpg" alt="story-image-3" />
+                <img src="images/story3.jpg" alt="story-image-3">
                 <div class="story">
                   <div>
                     “Saving her was the best decision I&apos;ve ever made.
@@ -425,8 +460,8 @@
                   <div>Joyce, Cat Mom</div>
                 </div>
                 <button class="readStory">
-                  <p>Read Story</p>
-                  <div class="readStoryArrow">
+                  <span>Read Story</span>
+                  <span class="readStoryArrow">
                     <svg
                       width="20"
                       height="20"
@@ -440,7 +475,7 @@
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
             </div>
@@ -448,9 +483,12 @@
         </div>
       </section>
 
+      <!-- ===================== CTA (HOW YOU CAN HELP) ===================== -->
       <section class="cta">
-        <!-- Call-to-action section -->
+        <h2 class="sr-only">Call to Action</h2>
+        <!-- Section wrapper -->
         <div class="howYouCanHelp" id="howYouCanHelp">
+          <!-- Section header -->
           <div class="titleDescription">
             <div class="howYouCanHelpTitle">
               <div class="greenDot"></div>
@@ -459,12 +497,15 @@
             <div class="title">Be the Reason a Life is Saved</div>
             <div class="description">
               You don&apos;t have to do everything. You just have to do
-              something. Your action—big or small—<br />can be the turning point
+              something. Your action—big or small—<br>can be the turning point
               in an animal&apos;s life.
             </div>
           </div>
+          <!-- Action cards grid -->
           <div class="howYouCanHelpContent">
+            <!-- Column 1: adopt / donate -->
             <div class="howYouCanHelpCol">
+              <!-- Card: Adopt (external link) -->
               <a
                 target="_blank"
                 href="https://paws.org.ph/adopt"
@@ -482,8 +523,9 @@
                   </p>
                 </div>
                 <div class="cardImg">
-                  <img src="images/help1.jpg" alt="help1-img" />
+                  <img src="images/help1.jpg" alt="help1-img">
                   <div class="cardArrow">
+                    <!-- Inline arrow icon -->
                     <svg
                       width="30"
                       height="30"
@@ -508,6 +550,7 @@
                   </div>
                 </div>
               </a>
+              <!-- Card: Donate (external link) -->
               <a
                 target="_blank"
                 href="https://donatetopaws.org.ph"
@@ -519,19 +562,19 @@
                   </div>
                   <p class="cardTitle">Donate Now</p>
                   <p class="cardDesc">
-                    Your donation creates real change. <br />
-                    • ₱100 can feed a stray for 5 days <br />
+                    Your donation creates real change. <br>
+                    • ₱100 can feed a stray for 5 days <br>
                     • ₱500 provides food and vitamins for a shelter dog for a
-                    week <br />
-                    • ₱1,000 helps cover one spay/neuter procedure <br />
+                    week <br>
+                    • ₱1,000 helps cover one spay/neuter procedure <br>
                     • ₱2,500 sponsors the full medical recovery of a rescued
-                    animal <br />
+                    animal <br>
                     All donations go directly to trusted partners: shelters,
                     rescuers, and vet clinics who need immediate support.
                   </p>
                 </div>
                 <div class="cardImg">
-                  <img src="images/help2.png" alt="help2-img" />
+                  <img src="images/help2.png" alt="help2-img">
                   <div class="cardArrow">
                     <svg
                       width="30"
@@ -540,7 +583,7 @@
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip0_41_527)">
+                      <g clip-path="url(#clip0_41_527-2)">
                         <path
                           fill-rule="evenodd"
                           clip-rule="evenodd"
@@ -549,7 +592,7 @@
                         />
                       </g>
                       <defs>
-                        <clipPath id="clip0_41_527">
+                        <clipPath id="clip0_41_527-2">
                           <rect width="30" height="30" fill="white" />
                         </clipPath>
                       </defs>
@@ -559,7 +602,9 @@
               </a>
             </div>
 
+            <!-- Column 2: volunteer / generic action -->
             <div class="howYouCanHelpCol">
+              <!-- Card: Volunteer (external link) -->
               <a
                 target="_blank"
                 href="https://paws.org.ph/volunteer"
@@ -571,17 +616,17 @@
                   </div>
                   <p class="cardTitle">Sign Up to Volunteer</p>
                   <p class="cardDesc">
-                    You don&apos;t need money to make an impact. <br />
-                    • 2 hours of fostering = a rescued pet off the street <br />
-                    • 1 ride to the vet = a life saved <br />
+                    You don&apos;t need money to make an impact. <br>
+                    • 2 hours of fostering = a rescued pet off the street <br>
+                    • 1 ride to the vet = a life saved <br>
                     • 1 social media post = someone finds their forever pet
-                    <br />
+                    <br>
                     We&apos;ll help match you with tasks based on your
                     availability and location.
                   </p>
                 </div>
                 <div class="cardImg">
-                  <img src="images/help3.png" alt="help3-img" />
+                  <img src="images/help3.png" alt="help3-img">
                   <div class="cardArrow">
                     <svg
                       width="30"
@@ -590,7 +635,7 @@
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip0_41_527)">
+                      <g clip-path="url(#clip0_41_527-3)">
                         <path
                           fill-rule="evenodd"
                           clip-rule="evenodd"
@@ -599,7 +644,7 @@
                         />
                       </g>
                       <defs>
-                        <clipPath id="clip0_41_527">
+                        <clipPath id="clip0_41_527-3">
                           <rect width="30" height="30" fill="white" />
                         </clipPath>
                       </defs>
@@ -607,6 +652,7 @@
                   </div>
                 </div>
               </a>
+              <!-- Card: General CTA (internal link to contact) -->
               <a href="#contact" class="howYouCanHelpCard">
                 <div class="cardTexts">
                   <div class="cardChips">
@@ -614,10 +660,10 @@
                   </div>
                   <p class="cardTitle">Take Action Now</p>
                   <p class="cardDesc">
-                    You can also: <br />
-                    ✔️ Share a rescue story on your feed <br />
+                    You can also: <br>
+                    ✔️ Share a rescue story on your feed <br>
                     ✔️ Sponsor a spay/neuter voucher for a local community
-                    <br />
+                    <br>
                     ✔️ Organize a fundraiser or adoption drive with your school
                     or barkada. Every Peso. Every Hour. Every Share. It All
                     Counts. Together, we can create a future where no animal is
@@ -625,7 +671,7 @@
                   </p>
                 </div>
                 <div class="cardImg">
-                  <img src="images/help4.png" alt="help4-img" />
+                  <img src="images/help4.png" alt="help4-img">
                   <div class="cardArrow">
                     <svg
                       width="30"
@@ -634,7 +680,7 @@
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip0_41_527)">
+                      <g clip-path="url(#clip0_41_527-4)">
                         <path
                           fill-rule="evenodd"
                           clip-rule="evenodd"
@@ -643,7 +689,7 @@
                         />
                       </g>
                       <defs>
-                        <clipPath id="clip0_41_527">
+                        <clipPath id="clip0_41_527-4">
                           <rect width="30" height="30" fill="white" />
                         </clipPath>
                       </defs>
@@ -655,12 +701,14 @@
           </div>
         </div>
 
+        <!-- ===================== CONTACT ===================== -->
         <div class="contact" id="contact">
           <div class="contactTitle">
             <div class="greenDot"></div>
             <p>CONTACT US</p>
           </div>
           <div class="contactContent">
+            <!-- Left: contact channels + hours -->
             <div class="contactContentLeft">
               <div class="title">Stay Connected with Us</div>
               <div class="chatWithUs">
@@ -682,6 +730,7 @@
                 </div>
               </div>
               <div class="socialsNBusiness">
+                <!-- Social links -->
                 <div class="socials">
                   <p class="title">Socials</p>
                   <div class="details">
@@ -714,6 +763,7 @@
                     >
                   </div>
                 </div>
+                <!-- Business hours -->
                 <div class="business">
                   <p class="title">Business Hours</p>
                   <div class="details">
@@ -723,6 +773,7 @@
               </div>
             </div>
 
+            <!-- Right: contact form (non-functional placeholder; wire to backend or JS) -->
             <div class="contactContentRight">
               <div class="description">
                 Got questions or want to learn more? We&apos;d love to hear from
@@ -730,6 +781,7 @@
                 events, and ways to help.
               </div>
               <form class="contactForm">
+                <!-- Two-column name row -->
                 <div class="formRow">
                   <div class="inputGap">
                     <label for="fname">First Name</label>
@@ -738,18 +790,19 @@
                       id="fname"
                       name="fname"
                       placeholder="Jane"
-                    />
+                   >
                   </div>
                   <div class="inputGap">
-                    <label for="lname">First Name</label>
+                    <label for="lname">Last Name</label>
                     <input
                       type="text"
                       id="lname"
                       name="lname"
                       placeholder="Doe"
-                    />
+                   >
                   </div>
                 </div>
+                <!-- Single-column inputs -->
                 <div class="inputGap">
                   <label for="email">Email</label>
                   <input
@@ -757,7 +810,7 @@
                     id="email"
                     name="email"
                     placeholder="janedoe@email.com"
-                  />
+                 >
                 </div>
                 <div class="inputGap">
                   <label for="mobilenum">Mobile No.</label>
@@ -766,7 +819,7 @@
                     id="mobilenum"
                     name="mobilenum"
                     placeholder="+639876543210"
-                  />
+                 >
                 </div>
                 <div class="inputGap">
                   <label for="subject">Subject</label>
@@ -775,8 +828,9 @@
                     id="subject"
                     name="subject"
                     placeholder="Partnership Inquiry"
-                  />
+                 >
                 </div>
+                <!-- Message textarea -->
                 <div class="inputGap">
                   <label for="message">Message</label>
                   <textarea
@@ -787,7 +841,8 @@
                     rows="4"
                   ></textarea>
                 </div>
-                <button class="formButton">SEND MESSAGE</button>
+                <!-- Submit (can be caught by JS to prevent page reload) -->
+                <button class="formButton" type="submit">SEND MESSAGE</button>
               </form>
             </div>
           </div>
@@ -795,9 +850,11 @@
       </section>
     </main>
 
+    <!-- ===================== FOOTER ===================== -->
     <footer>
       <div class="innerFooter">
         <div class="topFooter">
+          <!-- Brand + CTA -->
           <div class="topLeft">
             <div class="title">RESCUE. REHOME. RESTORE.</div>
             <div class="description">
@@ -808,6 +865,7 @@
             <a href="#contact" class="contactButton">
               <p>Contact Us</p>
               <div class="contactArrow">
+                <!-- Arrow icon -->
                 <svg
                   width="26"
                   height="26"
@@ -831,6 +889,7 @@
               </div>
             </a>
           </div>
+          <!-- Footer nav + contact info -->
           <div class="topRight">
             <div class="innerLeft">
               <a href="#" class="link-3">Home</a>
@@ -849,10 +908,12 @@
         </div>
         <div class="midFooter"></div>
         <div class="bottomFooter">
+          <!-- Brand lockup -->
           <div class="logo">
             <p class="stray">STRAY</p>
             <p class="no-more">NO MORE</p>
           </div>
+          <!-- Social icons -->
           <div class="socialsFooter">
             <a href="https://www.facebook.com" target="_blank">
               <svg
@@ -921,19 +982,24 @@
           </div>
         </div>
       </div>
+      <!-- Legal line -->
       <div class="outerFooter">
         <p>&copy; 2025 Leigh Arriane Buendia</p>
       </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- ===================== MODAL (STORY DETAILS) ===================== -->
     <div id="storyModal" class="modal">
       <div class="modal-content">
+        <!-- Close icon / button -->
         <span class="close">&times;</span>
+        <!-- JS injects full story content here -->
         <div id="modalStoryContent"></div>
       </div>
     </div>
 
+    <!-- ===================== SCRIPTS ===================== -->
+    <!-- stories.js handles story carousel, modal open/close, and dynamic content -->
     <script src="stories.js"></script>
   </body>
 </html>
