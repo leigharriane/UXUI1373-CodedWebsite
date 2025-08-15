@@ -39,17 +39,42 @@ main {
   margin-bottom: 2rem;
 }
 
+div,
+p {
+  transition-duration: 0.3s;
+}
+
 a {
   text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit; /* Inherits color from parent element */
+  text-decoration: none; /* Removes underline */
 }
 
 button {
   border: 0px;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
+
+svg {
+  transition-duration: 0.3s;
+}
+
 /* Header Styles */
 header {
-  padding: 20px 50px 0 50px;
+  z-index: 2;
+  background: #fafafa;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 50px 20px 50px;
   display: flex;
   flex-direction: column;
   /* gap: 20px; */
@@ -93,11 +118,10 @@ nav {
 
 .navLinks a {
   text-decoration: none;
-  color: var(--Black, #171717);
+  color: #171717;
 }
 
-button a {
-  text-decoration: none;
+.navButton a {
   color: #fafafa;
   border-radius: 50px;
   padding: 10px 12px;
@@ -105,13 +129,20 @@ button a {
   font-size: 16px;
 }
 
-nav button {
-  border: 0px;
+.navButton a:hover {
+  background-color: #fafafa;
+  color: #00854c;
+  outline: 0.5px solid #00854c;
 }
+
+/* nav button {
+  border: 0px;
+} */
 
 /* Hero Styles */
 
 .hero {
+  margin-top: 75px;
   padding: 20px 50px 0 50px;
   height: 100%;
   max-height: 580px;
@@ -158,11 +189,14 @@ nav button {
   letter-spacing: -0.44px;
 }
 
-button p {
+button p,
+.btnAction p {
   width: 100%;
+  text-align: center;
 }
 
-.hero button {
+.hero button,
+.hero .btnAction {
   max-width: 380px;
   display: flex;
   padding: 10px 10px 10px 40px;
@@ -179,14 +213,31 @@ button p {
   width: 100%;
 }
 
+.hero button:hover,
+.hero .btnAction:hover {
+  background: #fafafa;
+  color: #00854c;
+}
+
+.hero button:hover .arrow,
+.hero .btnAction:hover .arrow {
+  background-color: #00854c;
+}
+
+.hero button:hover svg,
+.hero .btnAction:hover svg {
+  fill: #fafafa;
+}
+
 .hero .arrow {
   border-radius: 100px;
   background: #fafafa;
   padding: 4px;
+  border: 0px;
 }
 
 .hero svg {
-  color: #fafafa;
+  fill: #00854c;
   display: flex;
   width: 30px;
   height: 30px;
@@ -363,6 +414,7 @@ button p {
   width: 100%;
   /* height: 100%; */
   min-height: 500px;
+  min-width: 210px;
 }
 
 .statisticsCol img {
@@ -389,6 +441,7 @@ button p {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.859px;
+  width: 100%;
 }
 
 .stats .text {
@@ -397,6 +450,7 @@ button p {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.44px;
+  width: 100%;
 }
 
 .color1 {
@@ -446,9 +500,11 @@ button p {
   flex-direction: column;
   gap: 20px;
   width: 40%;
+  background-color: #fafafa;
+  z-index: 1;
 }
 
-.arrows {
+.storiesContentLeft .arrows {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -456,13 +512,25 @@ button p {
   margin-top: 100px;
 }
 
-.arrow {
+.storiesContentLeft .arrow {
   border-radius: 50px;
   border: 1px solid #171717;
   padding: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.storiesContentLeft .arrow svg {
+  fill: #171717;
+}
+
+.storiesContentLeft .arrow:hover {
+  background: #171717;
+}
+
+.storiesContentLeft .arrow:hover svg {
+  fill: #fafafa;
 }
 
 .storyCard {
@@ -531,6 +599,26 @@ button p {
   background: #00854c;
 }
 
+.readStoryArrow svg {
+  fill: #fafafa;
+}
+
+.readStory:hover {
+  background: #00854c;
+}
+
+.readStory:hover p {
+  color: #fafafa;
+}
+
+.readStory:hover .readStoryArrow {
+  background-color: #fafafa;
+}
+
+.readStory:hover .readStoryArrow svg {
+  fill: #00854c;
+}
+
 /* How to Help Styles */
 
 .howYouCanHelp {
@@ -563,6 +651,20 @@ button p {
   background-color: #f4f4f4;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.howYouCanHelpCard:hover {
+  background-color: #00854c;
+  color: #fafafa;
+}
+
+.howYouCanHelpCard:hover .cardChips p {
+  background: #fafafa;
+  color: #00854c;
+}
+
+.howYouCanHelpCard:hover .cardDesc {
+  color: #bababa;
 }
 
 .cardTexts {
@@ -678,6 +780,8 @@ button p {
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  align-items: start;
+  text-align: start;
 }
 
 .socials {
@@ -685,6 +789,8 @@ button p {
   flex-direction: column;
   gap: 16px;
   width: 40%;
+  align-items: start;
+  text-align: start;
 }
 
 .chatWithUs .title,
@@ -701,6 +807,8 @@ button p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: start;
+  justify-content: start;
 }
 
 .chatWithUs .details p,
@@ -720,7 +828,7 @@ button p {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.352px;
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
 }
 
 .socialsNBusiness {
@@ -782,3 +890,328 @@ textarea {
   resize: none;
 }
 
+.formButton {
+  display: flex;
+  padding: 18px 22px;
+  justify-content: center;
+  align-items: center;
+  background-color: #00854c;
+  font-size: 20px;
+  color: #fafafa;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.formButton:hover {
+  background-color: #fafafa;
+  color: #00854c;
+  outline: 1px solid #00854c;
+}
+
+footer {
+  margin-top: 60px;
+  width: 100%;
+  padding: 20px 50px;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.innerFooter {
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background: var(
+    --Gradient-Green,
+    linear-gradient(94deg, #0c4b30 33.33%, #5abe93 100%)
+  );
+  gap: 40px;
+  z-index: 1;
+}
+
+.topFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 40px;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  text-align: start;
+  width: 70%;
+}
+
+.topLeft .title {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.343px;
+}
+
+.topLeft .description {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.352px;
+}
+
+.topRight {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 30%;
+}
+
+.topRight .innerLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+  text-align: start;
+}
+
+.topRight .innerRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  text-align: start;
+}
+
+.topRight p,
+.topRight a {
+  color: var(--White, #fafafa);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.352px;
+}
+
+.contactButton {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 6px 6px 6px 30px;
+  border-radius: 100px;
+  background: #fafafa;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contactButton svg {
+  fill: #fafafa;
+}
+
+.contactButton p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  color: #00854c;
+}
+
+.contactArrow {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: #00854c;
+}
+
+.contactButton:hover {
+  background: #00854c;
+}
+
+.contactButton:hover p {
+  color: #fafafa;
+}
+
+.contactButton:hover .contactArrow {
+  background-color: #fafafa;
+}
+
+.contactButton:hover .contactArrow svg {
+  fill: #00854c;
+}
+
+.midFooter {
+  height: 1px;
+  width: 100%;
+  background: #fafafa;
+}
+
+.bottomFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomFooter .logo {
+  color: #fafafa;
+}
+
+.socialsFooter {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: end;
+}
+
+.socialsFooter svg {
+  cursor: pointer;
+}
+
+.outerFooter {
+  position: absolute;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  background-color: #171717;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  margin-bottom: -60px;
+}
+
+.statistics-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.statistics-content {
+  position: relative;
+  display: flex;
+  animation: marquee 5s linear infinite;
+  will-change: transform;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.descriptionmax {
+  max-width: 492px;
+}
+
+.link-2 {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: #171717;
+  padding: 0 1px;
+  transition: color ease 0.3s;
+}
+
+.link-2::before,
+.link-2::after {
+  content: "";
+  position: absolute;
+  background-color: #171717; /* replace with your $underlineColor */
+  z-index: -1;
+  height: 2px; /* replace with your $underlineHeight */
+}
+
+.link-2::before {
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  transition: width ease 0.4s;
+}
+
+.link-2::after {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transition: all ease 0.6s;
+}
+
+.link-2:hover::before {
+  width: 100%;
+}
+
+.link-2:hover::after {
+  left: 100%;
+  width: 0%;
+  transition: all ease 0.2s;
+}
+
+.link-3:hover {
+  opacity: 0.5;
+}
+
+/* Modal overlay */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000;
+  padding-top: 80px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.close {
+  color: #555;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}

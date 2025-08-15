@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Landing Page</title>
+    <title>Stray No More - Rescue. Rehome. Restore.</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
     <header>
@@ -16,12 +17,12 @@
         </div>
         <div class="navLinks">
           <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Why It Matters</a>
-          <a href="#">Stories</a>
-          <a href="#">How You Can Help</a>
+          <a href="#aboutUs">About</a>
+          <a href="#whyItMatters">Why It Matters</a>
+          <a href="#stories">Stories</a>
+          <a href="#howYouCanHelp">How You Can Help</a>
         </div>
-        <button><a href="#">CONTACT</a></button>
+        <button class="navButton"><a href="#contact">CONTACT</a></button>
       </nav>
     </header>
 
@@ -36,7 +37,7 @@
               Every Life Deserves a Home. Help give stray animals in the
               Philippines a second chance through adoption, rescue, or support.
             </p>
-            <button>
+            <a class="btnAction" href="#howYouCanHelp">
               <p>TAKE ACTION</p>
               <div class="arrow">
                 <svg
@@ -50,18 +51,17 @@
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M19.6337 14.1162C19.868 14.3506 19.9997 14.6685 19.9997 15C19.9997 15.3314 19.868 15.6493 19.6337 15.8837L12.5624 22.955C12.4471 23.0744 12.3092 23.1696 12.1567 23.2351C12.0042 23.3006 11.8402 23.3351 11.6742 23.3365C11.5082 23.338 11.3436 23.3064 11.19 23.2435C11.0364 23.1807 10.8968 23.0878 10.7794 22.9705C10.6621 22.8531 10.5693 22.7135 10.5064 22.5599C10.4436 22.4063 10.4119 22.2417 10.4134 22.0757C10.4148 21.9098 10.4493 21.7457 10.5148 21.5932C10.5803 21.4407 10.6756 21.3028 10.7949 21.1875L16.9824 15L10.7949 8.81248C10.5672 8.57673 10.4412 8.26098 10.4441 7.93323C10.4469 7.60548 10.5784 7.29197 10.8102 7.06021C11.0419 6.82845 11.3554 6.69699 11.6832 6.69414C12.0109 6.69129 12.3267 6.81728 12.5624 7.04498L19.6337 14.1162Z"
-                    fill="#00854C"
                   />
                 </svg>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </section>
 
       <section class="features">
         <!-- Features or content blocks go here -->
-        <div class="aboutUs">
+        <div class="aboutUs" id="aboutUs">
           <div class="aboutTitle">
             <div class="greenDot"></div>
             <p>ABOUT US</p>
@@ -160,7 +160,7 @@
           </div>
         </div>
 
-        <div class="whyItMatters">
+        <div class="whyItMatters" id="whyItMatters">
           <div class="titleDescription">
             <div class="whyItMattersTitle">
               <div class="greenDot"></div>
@@ -176,68 +176,131 @@
               can empower us to make meaningful change.
             </div>
           </div>
-          <div class="statistics">
-            <div class="statisticsCol">
-              <img src="images/stats1.jpg" alt="stat-image-cat" />
-              <div class="stats color1">
-                <div class="number">80%+</div>
-                <div class="text">
-                  of street animals are unspayed/unneutered.
+          <div class="statistics-marquee">
+            <div class="statistics-content">
+              <div class="statistics">
+                <div class="statisticsCol">
+                  <img src="images/stats1.jpg" alt="stat-image-cat" />
+                  <div class="stats color1">
+                    <div class="number">80%+</div>
+                    <div class="text">
+                      of street animals are unspayed / unneutered.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color2">
+                    <div class="number">#6</div>
+                    <div class="text">
+                      in countries worldwide for rabies incidence, largely due
+                      to high stray dog populations.
+                    </div>
+                  </div>
+                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat" />
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color3">
+                    <div class="number">23.3 Million</div>
+                    <div class="text">
+                      total dogs, including owned and roaming, across the
+                      country. This breaks down to roughly 208-256 dogs per
+                      1,000 people, depending on urban vs rural areas.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color4">
+                    <div class="number">~1 in 10</div>
+                    <div class="text">
+                      stray animals ever find a forever home. Many die from
+                      disease, injury, hunger, or are euthanized.
+                    </div>
+                  </div>
+                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage" />
+                </div>
+                <div class="statisticsCol">
+                  <img src="images/stats5.jpg" alt="stat-image-cat2" />
+                  <div class="stats color5">
+                    <div class="number">12-13 Million</div>
+                    <div class="text">
+                      stray dogs and cats currently roam the Philippines.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color6">
+                    <div class="number">100,000 - 500,000</div>
+                    <div class="text">
+                      additional strays end up on the streets each year.
+                    </div>
+                  </div>
+                  <img src="images/stats6.jpg" alt="stat-image-dog" />
                 </div>
               </div>
-            </div>
-            <div class="statisticsCol">
-              <div class="stats color2">
-                <div class="number">#6</div>
-                <div class="text">
-                  in countries worldwide for rabies incidence, largely due to
-                  high stray dog populations.
+              <div class="statistics">
+                <div class="statisticsCol">
+                  <img src="images/stats1.jpg" alt="stat-image-cat" />
+                  <div class="stats color1">
+                    <div class="number">80%+</div>
+                    <div class="text">
+                      of street animals are unspayed / unneutered.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color2">
+                    <div class="number">#6</div>
+                    <div class="text">
+                      in countries worldwide for rabies incidence, largely due
+                      to high stray dog populations.
+                    </div>
+                  </div>
+                  <img src="images/stats2.jpg" alt="stat-image-dog-and-cat" />
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color3">
+                    <div class="number">23.3 Million</div>
+                    <div class="text">
+                      total dogs, including owned and roaming, across the
+                      country. This breaks down to roughly 208-256 dogs per
+                      1,000 people, depending on urban vs rural areas.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color4">
+                    <div class="number">~1 in 10</div>
+                    <div class="text">
+                      stray animals ever find a forever home. Many die from
+                      disease, injury, hunger, or are euthanized.
+                    </div>
+                  </div>
+                  <img src="images/stats4.jpg" alt="stat-image-cat-in-cage" />
+                </div>
+                <div class="statisticsCol">
+                  <img src="images/stats5.jpg" alt="stat-image-cat2" />
+                  <div class="stats color5">
+                    <div class="number">12-13 Million</div>
+                    <div class="text">
+                      stray dogs and cats currently roam the Philippines.
+                    </div>
+                  </div>
+                </div>
+                <div class="statisticsCol">
+                  <div class="stats color6">
+                    <div class="number">100,000 - 500,000</div>
+                    <div class="text">
+                      additional strays end up on the streets each year.
+                    </div>
+                  </div>
+                  <img src="images/stats6.jpg" alt="stat-image-dog" />
                 </div>
               </div>
-              <img src="images/stats2.jpg" alt="stat-image-dog-and-cat" />
-            </div>
-            <div class="statisticsCol">
-              <div class="stats color3">
-                <div class="number">23.3 Million</div>
-                <div class="text">
-                  total dogs, including owned and roaming, across the country.
-                  This breaks down to roughly 208-256 dogs per 1,000 people,
-                  depending on urban vs rural areas.
-                </div>
-              </div>
-            </div>
-            <div class="statisticsCol">
-              <div class="stats color4">
-                <div class="number">~1 in 10</div>
-                <div class="text">
-                  stray animals ever find a forever home. Many die from disease,
-                  injury, hunger, or are euthanized.
-                </div>
-              </div>
-              <img src="images/stats4.jpg" alt="stat-image-cat-in-cage" />
-            </div>
-            <div class="statisticsCol">
-              <img src="images/stats5.jpg" alt="stat-image-cat2" />
-              <div class="stats color5">
-                <div class="number">12-13 Million</div>
-                <div class="text">
-                  stray dogs and cats currently roam the Philippines.
-                </div>
-              </div>
-            </div>
-            <div class="statisticsCol">
-              <div class="stats color6">
-                <div class="number">100,000 - 500,000</div>
-                <div class="text">
-                  additional strays end up on the streets each year.
-                </div>
-              </div>
-              <img src="images/stats6.jpg" alt="stat-image-dog" />
             </div>
           </div>
         </div>
 
-        <div class="stories">
+        <div class="stories" id="stories">
           <div class="storiesTitle">
             <div class="greenDot"></div>
             <p>STORIES OF RESCUE</p>
@@ -245,10 +308,10 @@
           <div class="storiesContent">
             <div class="storiesContentLeft">
               <div class="title">Hope Has a Name</div>
-              <div class="description">
+              <div class="description descriptionmax">
                 Behind every rescued animal is a story of survival, love, and a
-                second chance. These are just a few of the lives changed—because
-                someone like you cared.
+                second chance. These are just a few of the lives changed —
+                because someone like you cared.
               </div>
               <div class="arrows">
                 <div class="arrow">
@@ -264,7 +327,6 @@
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M13.8217 21.1783C13.5092 20.8657 13.3337 20.4419 13.3337 19.9999C13.3337 19.558 13.5092 19.1342 13.8217 18.8216L23.25 9.39328C23.4037 9.23409 23.5877 9.10712 23.791 9.01978C23.9943 8.93243 24.213 8.88645 24.4343 8.88453C24.6556 8.88261 24.8751 8.92477 25.0799 9.00858C25.2847 9.09238 25.4708 9.21613 25.6273 9.37262C25.7838 9.52911 25.9076 9.71519 25.9914 9.92002C26.0752 10.1248 26.1173 10.3443 26.1154 10.5656C26.1135 10.7869 26.0675 11.0056 25.9802 11.209C25.8928 11.4123 25.7658 11.5962 25.6067 11.7499L17.3567 19.9999L25.6067 28.2499C25.9103 28.5643 26.0783 28.9853 26.0745 29.4223C26.0707 29.8593 25.8954 30.2773 25.5864 30.5863C25.2773 30.8953 24.8593 31.0706 24.4223 31.0744C23.9853 31.0782 23.5643 30.9102 23.25 30.6066L13.8217 21.1783Z"
-                        fill="#171717"
                       />
                     </g>
                     <defs>
@@ -291,7 +353,6 @@
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M26.1783 18.8217C26.4908 19.1343 26.6663 19.5581 26.6663 20.0001C26.6663 20.442 26.4908 20.8658 26.1783 21.1784L16.75 30.6067C16.5963 30.7659 16.4123 30.8929 16.209 30.9802C16.0057 31.0676 15.787 31.1135 15.5657 31.1155C15.3444 31.1174 15.1249 31.0752 14.9201 30.9914C14.7153 30.9076 14.5292 30.7839 14.3727 30.6274C14.2162 30.4709 14.0924 30.2848 14.0086 30.08C13.9248 29.8752 13.8827 29.6557 13.8846 29.4344C13.8865 29.2131 13.9325 28.9944 14.0198 28.791C14.1072 28.5877 14.2342 28.4038 14.3933 28.2501L22.6433 20.0001L14.3933 11.7501C14.0897 11.4357 13.9217 11.0147 13.9255 10.5777C13.9293 10.1407 14.1046 9.72271 14.4136 9.41369C14.7227 9.10468 15.1407 8.9294 15.5777 8.9256C16.0147 8.9218 16.4357 9.08979 16.75 9.39339L26.1783 18.8217Z"
-                      fill="#171717"
                     />
                   </svg>
                 </div>
@@ -321,7 +382,6 @@
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
-                        fill="#FAFAFA"
                       />
                     </svg>
                   </div>
@@ -350,7 +410,6 @@
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
-                        fill="#FAFAFA"
                       />
                     </svg>
                   </div>
@@ -379,7 +438,6 @@
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M13.0892 9.41074C13.2454 9.56701 13.3332 9.77894 13.3332 9.99991C13.3332 10.2209 13.2454 10.4328 13.0892 10.5891L8.375 15.3032C8.29813 15.3828 8.20617 15.4463 8.1045 15.49C8.00283 15.5337 7.89348 15.5567 7.78284 15.5576C7.67219 15.5586 7.56245 15.5375 7.46004 15.4956C7.35763 15.4537 7.26458 15.3918 7.18634 15.3136C7.10809 15.2353 7.04622 15.1423 7.00432 15.0399C6.96242 14.9375 6.94133 14.8277 6.94229 14.7171C6.94325 14.6064 6.96624 14.4971 7.00992 14.3954C7.05359 14.2937 7.11708 14.2018 7.19667 14.1249L11.3217 9.99991L7.19667 5.87491C7.04487 5.71774 6.96087 5.50724 6.96277 5.28874C6.96467 5.07024 7.05231 4.86123 7.20682 4.70672C7.36133 4.55222 7.57034 4.46458 7.78883 4.46268C8.00733 4.46078 8.21783 4.54477 8.375 4.69657L13.0892 9.41074Z"
-                        fill="#FAFAFA"
                       />
                     </svg>
                   </div>
@@ -392,7 +450,7 @@
 
       <section class="cta">
         <!-- Call-to-action section -->
-        <div class="howYouCanHelp">
+        <div class="howYouCanHelp" id="howYouCanHelp">
           <div class="titleDescription">
             <div class="howYouCanHelpTitle">
               <div class="greenDot"></div>
@@ -407,7 +465,11 @@
           </div>
           <div class="howYouCanHelpContent">
             <div class="howYouCanHelpCol">
-              <div class="howYouCanHelpCard">
+              <a
+                target="_blank"
+                href="https://paws.org.ph/adopt"
+                class="howYouCanHelpCard"
+              >
                 <div class="cardTexts">
                   <div class="cardChips">
                     <p>Adopt a Rescue</p>
@@ -445,8 +507,12 @@
                     </svg>
                   </div>
                 </div>
-              </div>
-              <div class="howYouCanHelpCard">
+              </a>
+              <a
+                target="_blank"
+                href="https://donatetopaws.org.ph"
+                class="howYouCanHelpCard"
+              >
                 <div class="cardTexts">
                   <div class="cardChips">
                     <p>Donate What You Can</p>
@@ -490,11 +556,15 @@
                     </svg>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div class="howYouCanHelpCol">
-              <div class="howYouCanHelpCard">
+              <a
+                target="_blank"
+                href="https://paws.org.ph/volunteer"
+                class="howYouCanHelpCard"
+              >
                 <div class="cardTexts">
                   <div class="cardChips">
                     <p>Volunteer Your Time</p>
@@ -536,8 +606,8 @@
                     </svg>
                   </div>
                 </div>
-              </div>
-              <div class="howYouCanHelpCard">
+              </a>
+              <a href="#contact" class="howYouCanHelpCard">
                 <div class="cardTexts">
                   <div class="cardChips">
                     <p>Not Sure Where To Start?</p>
@@ -580,12 +650,12 @@
                     </svg>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
           <div class="contactTitle">
             <div class="greenDot"></div>
             <p>CONTACT US</p>
@@ -597,19 +667,51 @@
                 <p class="title">Chat with us</p>
                 <div class="details">
                   <p>Based in Manila, serving nationwide</p>
-                  <a>contact@straynomore.ph</a>
-                  <a>volunteer@straynomore.ph</a>
+                  <a
+                    target="_blank"
+                    href="mailto:contact@straynomore.ph"
+                    class="link-2"
+                    >contact@straynomore.ph</a
+                  >
+                  <a
+                    target="_blank"
+                    href="mailto:volunteer@straynomore.ph"
+                    class="link-2"
+                    >volunteer@straynomore.ph</a
+                  >
                 </div>
               </div>
               <div class="socialsNBusiness">
                 <div class="socials">
                   <p class="title">Socials</p>
                   <div class="details">
-                    <a>Facebook</a>
-                    <a>Instagram</a>
-                    <a>Tiktok</a>
-                    <a>Youtube</a>
-                    <a>Twitter / X</a>
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com"
+                      class="link-2"
+                      >Facebook</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com"
+                      class="link-2"
+                      >Instagram</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://www.tiktok.com"
+                      class="link-2"
+                      >Tiktok</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com"
+                      class="link-2"
+                      >Youtube</a
+                    >
+                    <a target="_blank" href="https://www.x.com" class="link-2"
+                      >Twitter / X</a
+                    >
                   </div>
                 </div>
                 <div class="business">
@@ -685,8 +787,7 @@
                     rows="4"
                   ></textarea>
                 </div>
-
-                <button class="formButton"></button>
+                <button class="formButton">SEND MESSAGE</button>
               </form>
             </div>
           </div>
@@ -695,7 +796,144 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Leigh Arriane Buendia</p>
+      <div class="innerFooter">
+        <div class="topFooter">
+          <div class="topLeft">
+            <div class="title">RESCUE. REHOME. RESTORE.</div>
+            <div class="description">
+              Stray No More is a non-profit organization dedicated to rescuing,
+              rehabilitating, and rehoming stray animals in the Philippines. We
+              believe every animal deserves a loving home.
+            </div>
+            <a href="#contact" class="contactButton">
+              <p>Contact Us</p>
+              <div class="contactArrow">
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_78_59)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.0159 12.2343C17.219 12.4374 17.3331 12.7129 17.3331 13.0002C17.3331 13.2875 17.219 13.563 17.0159 13.7661L10.8875 19.8945C10.7876 19.998 10.668 20.0805 10.5359 20.1373C10.4037 20.1941 10.2615 20.224 10.1177 20.2252C9.97384 20.2265 9.83118 20.1991 9.69805 20.1446C9.56491 20.0901 9.44395 20.0097 9.34223 19.908C9.24052 19.8062 9.16008 19.6853 9.1056 19.5521C9.05113 19.419 9.02372 19.2764 9.02497 19.1325C9.02622 18.9887 9.05611 18.8465 9.11289 18.7143C9.16966 18.5822 9.25219 18.4626 9.35566 18.3627L14.7182 13.0002L9.35566 7.6377C9.15832 7.43338 9.04913 7.15972 9.0516 6.87568C9.05407 6.59163 9.168 6.31992 9.36886 6.11906C9.56972 5.9182 9.84143 5.80427 10.1255 5.8018C10.4095 5.79933 10.6832 5.90852 10.8875 6.10586L17.0159 12.2343Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_78_59">
+                      <rect width="26" height="26" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="topRight">
+            <div class="innerLeft">
+              <a href="#" class="link-3">Home</a>
+              <a href="#aboutUs" class="link-3">About</a>
+              <a href="#whyItMatters" class="link-3">Why It Matters</a>
+              <a href="#stories" class="link-3">Stories</a>
+              <a href="#howYouCanHelp" class="link-3">How You Can Help</a>
+              <a href="#contact" class="link-3">Contact</a>
+            </div>
+            <div class="innerRight">
+              <p>(555) 555-1234</p>
+              <p>Based in Metro Manila, Philippines.</p>
+              <p>Serving animals nationwide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="midFooter"></div>
+        <div class="bottomFooter">
+          <div class="logo">
+            <p class="stray">STRAY</p>
+            <p class="no-more">NO MORE</p>
+          </div>
+          <div class="socialsFooter">
+            <a href="https://www.facebook.com" target="_blank">
+              <svg
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 20.5C0 9.45431 8.95431 0.5 20 0.5C31.0457 0.5 40 9.45431 40 20.5C40 31.5457 31.0457 40.5 20 40.5C8.95431 40.5 0 31.5457 0 20.5Z"
+                  fill="#171717"
+                />
+                <path
+                  d="M16.5108 31.1667H20.2953V21.7375H23.4599L23.9378 18.0692H20.2953V15.7183C20.2953 14.6592 20.5924 13.9358 22.1166 13.9358H24.067V10.6421C23.7312 10.6033 22.5816 10.5 21.2383 10.5C18.4224 10.5 16.5108 12.2179 16.5108 15.3567V18.0692H13.3333V21.7375H16.5108V31.1667Z"
+                  fill="#FAFAFA"
+                />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+              <svg
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 20.5C0 9.45431 8.95431 0.5 20 0.5C31.0457 0.5 40 9.45431 40 20.5C40 31.5457 31.0457 40.5 20 40.5C8.95431 40.5 0 31.5457 0 20.5Z"
+                  fill="#171717"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.0012 9.8335C17.1042 9.8335 16.7407 9.84616 15.6029 9.89794C14.4673 9.94994 13.6922 10.1297 13.014 10.3935C12.3124 10.6659 11.7173 11.0304 11.1244 11.6235C10.5311 12.2164 10.1666 12.8115 9.89328 13.5129C9.62883 14.1913 9.44883 14.9667 9.39772 16.1018C9.34683 17.2396 9.3335 17.6034 9.3335 20.5003C9.3335 23.3972 9.34639 23.7596 9.39794 24.8974C9.45016 26.033 9.62994 26.8081 9.8935 27.4863C10.1662 28.1879 10.5306 28.783 11.1237 29.3759C11.7164 29.9693 12.3115 30.3346 13.0126 30.607C13.6913 30.8708 14.4667 31.0506 15.602 31.1026C16.7398 31.1544 17.1031 31.1671 19.9998 31.1671C22.897 31.1671 23.2594 31.1544 24.3972 31.1026C25.5328 31.0506 26.3088 30.8708 26.9875 30.607C27.6888 30.3346 28.283 29.9693 28.8757 29.3759C29.469 28.783 29.8335 28.1879 30.1068 27.4866C30.3691 26.8081 30.5491 26.0328 30.6024 24.8977C30.6535 23.7599 30.6668 23.3972 30.6668 20.5003C30.6668 17.6034 30.6535 17.2398 30.6024 16.102C30.5491 14.9664 30.3691 14.1913 30.1068 13.5131C29.8335 12.8115 29.469 12.2164 28.8757 11.6235C28.2824 11.0302 27.689 10.6657 26.9868 10.3935C26.3068 10.1297 25.5312 9.94994 24.3957 9.89794C23.2579 9.84616 22.8956 9.8335 19.9978 9.8335H20.0012ZM19.0442 11.7557C19.3282 11.7553 19.6451 11.7557 20.0011 11.7557C22.8491 11.7557 23.1867 11.7659 24.3114 11.817C25.3514 11.8646 25.9158 12.0384 26.2918 12.1844C26.7896 12.3777 27.1445 12.6088 27.5176 12.9822C27.891 13.3555 28.1221 13.7111 28.3159 14.2088C28.4619 14.5844 28.6359 15.1489 28.6832 16.1889C28.7343 17.3133 28.7454 17.6511 28.7454 20.4978C28.7454 23.3445 28.7343 23.6823 28.6832 24.8067C28.6357 25.8467 28.4619 26.4112 28.3159 26.7868C28.1225 27.2845 27.891 27.639 27.5176 28.0121C27.1443 28.3854 26.7899 28.6166 26.2918 28.8099C25.9163 28.9566 25.3514 29.1299 24.3114 29.1774C23.1869 29.2286 22.8491 29.2397 20.0011 29.2397C17.1529 29.2397 16.8153 29.2286 15.6909 29.1774C14.6508 29.1294 14.0864 28.9557 13.7102 28.8097C13.2124 28.6163 12.8568 28.3852 12.4835 28.0119C12.1101 27.6385 11.879 27.2839 11.6853 26.7859C11.5393 26.4103 11.3652 25.8459 11.3179 24.8058C11.2668 23.6814 11.2566 23.3436 11.2566 20.4951C11.2566 17.6467 11.2668 17.3107 11.3179 16.1862C11.3655 15.1462 11.5393 14.5817 11.6853 14.2057C11.8786 13.708 12.1101 13.3524 12.4835 12.9791C12.8568 12.6057 13.2124 12.3746 13.7102 12.1808C14.0862 12.0342 14.6508 11.8608 15.6909 11.813C16.6749 11.7686 17.0562 11.7553 19.0442 11.753V11.7557ZM25.695 13.5268C24.9883 13.5268 24.4149 14.0995 24.4149 14.8064C24.4149 15.5131 24.9883 16.0864 25.695 16.0864C26.4016 16.0864 26.975 15.5131 26.975 14.8064C26.975 14.0997 26.4016 13.5268 25.695 13.5268ZM20.0012 15.0224C16.976 15.0224 14.5233 17.4751 14.5233 20.5002C14.5233 23.5254 16.976 25.977 20.0012 25.977C23.0263 25.977 25.4781 23.5254 25.4781 20.5002C25.4781 17.4751 23.0263 15.0224 20.0012 15.0224ZM20.0011 16.9447C21.9647 16.9447 23.5567 18.5364 23.5567 20.5002C23.5567 22.4638 21.9647 24.0558 20.0011 24.0558C18.0373 24.0558 16.4455 22.4638 16.4455 20.5002C16.4455 18.5364 18.0373 16.9447 20.0011 16.9447Z"
+                  fill="#FAFAFA"
+                />
+              </svg>
+            </a>
+
+            <a href="https://www.tiktok.com" target="_blank">
+              <svg
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 20.5C0 9.4543 8.9543 0.5 20 0.5C31.0457 0.5 40 9.4543 40 20.5C40 31.5457 31.0457 40.5 20 40.5C8.9543 40.5 0 31.5457 0 20.5Z"
+                  fill="#171717"
+                />
+                <path
+                  d="M28.6088 15.3477C27.5784 15.1212 26.6463 14.574 25.9463 13.7848C25.2462 12.9955 24.8141 12.0048 24.712 10.9548V10.5H21.146V24.6298C21.1467 25.2567 20.9502 25.868 20.5842 26.3771C20.2181 26.8861 19.7013 27.2671 19.1067 27.466C18.5121 27.665 17.8701 27.6718 17.2714 27.4855C16.6727 27.2993 16.1479 26.9294 15.7711 26.4283C15.4336 25.9847 15.2269 25.4555 15.1744 24.9006C15.122 24.3456 15.2258 23.7871 15.4742 23.2881C15.7226 22.7891 16.1057 22.3696 16.5801 22.0769C17.0546 21.7843 17.6014 21.6303 18.1588 21.6322C18.4671 21.6305 18.7738 21.6758 19.0684 21.7666V18.1489C18.7256 18.1064 18.3801 18.0892 18.0348 18.0972C16.7627 18.1312 15.5281 18.5354 14.4823 19.2603C13.4364 19.9852 12.6246 20.9994 12.1463 22.1786C11.6681 23.3579 11.544 24.651 11.7895 25.8996C12.0349 27.1483 12.6391 28.2983 13.5281 29.2087C14.4393 30.1351 15.6052 30.7697 16.8778 31.0319C18.1504 31.2941 19.4722 31.172 20.6753 30.6812C21.8784 30.1905 22.9085 29.3531 23.6346 28.2756C24.3607 27.1981 24.7501 25.9291 24.7534 24.6298V17.3943C26.1916 18.4217 27.9163 18.9713 29.6838 18.9654V15.4511C29.3366 15.4525 28.9902 15.4179 28.6502 15.3477H28.6088Z"
+                  fill="#FAFAFA"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="outerFooter">
+        <p>&copy; 2025 Leigh Arriane Buendia</p>
+      </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="storyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalStoryContent"></div>
+      </div>
+    </div>
+
+    <script src="stories.js"></script>
   </body>
 </html>
