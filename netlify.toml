@@ -1,5 +1,8 @@
 # Netlify configuration
-# Static site — no build step. Publish the landing-page-project folder.
+# Static site — no build step.
+# base = the subfolder Netlify works from; publish "." = that same folder
+# (publish is resolved relative to base, so this avoids a doubled path).
 [build]
-  publish = "landing-page-project"
+  base = "landing-page-project"
+  publish = "."
   command = ""
