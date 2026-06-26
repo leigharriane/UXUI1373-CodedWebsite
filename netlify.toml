@@ -1,0 +1,5 @@
+# Netlify configuration
+# Static site — no build step. Publish the landing-page-project folder.
+[build]
+  publish = "landing-page-project"
+  command = ""
