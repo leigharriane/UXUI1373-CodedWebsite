@@ -22,15 +22,29 @@
           <p class="no-more">NO MORE</p>
         </div>
         <!-- Primary nav links (anchor to sections) -->
-        <div class="navLinks">
+        <div class="navLinks" id="navLinks">
           <a href="#">Home</a>
           <a href="#aboutUs">About</a>
           <a href="#whyItMatters">Why It Matters</a>
           <a href="#stories">Stories</a>
           <a href="#howYouCanHelp">How You Can Help</a>
+          <!-- CTA inside menu for mobile -->
+          <a class="navButton navButtonMobile" href="#contact">CONTACT</a>
         </div>
-        <!-- Header CTA -->
-        <a class="navButton" href="#contact">CONTACT</a>
+        <!-- Header CTA (desktop) -->
+        <a class="navButton navButtonDesktop" href="#contact">CONTACT</a>
+        <!-- Hamburger toggle (mobile only) -->
+        <button
+          class="navToggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
 
@@ -43,7 +57,6 @@
         <img src="images/hero.jpg" alt="hero-image">
         <!-- Overlay headline + CTA -->
         <div>
-          <p class="bigText">STRAY NO MORE</p>
           <div class="textButtonElement">
             <p class="smallerText">
               Every Life Deserves a Home. Help give stray animals in the
@@ -70,6 +83,7 @@
               </div>
             </a>
           </div>
+          <p class="bigText">STRAY NO MORE</p>
         </div>
       </section>
 

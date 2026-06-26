@@ -1,3 +1,26 @@
+// Mobile navigation toggle (hamburger)
+const navToggle = document.getElementById("navToggle");
+const navLinksEl = document.getElementById("navLinks");
+
+if (navToggle && navLinksEl) {
+  const closeMenu = () => {
+    navLinksEl.classList.remove("open");
+    navToggle.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinksEl.classList.toggle("open");
+    navToggle.classList.toggle("open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // Close the menu after tapping a link
+  navLinksEl.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}
+
 // Get arrow elements and story cards
 const leftArrow = document.querySelector(
   ".storiesContentLeft .arrows .arrow:first-child"

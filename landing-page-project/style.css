@@ -2,7 +2,8 @@
 /* General element styles */
 @font-face {
   font-family: "NB International Pro Medium";
-  src: local("NB International Pro Medium"),
+  src:
+    local("NB International Pro Medium"),
     url("/font/NB-International-Pro/NB-Medium.ttf") format("truetype");
   font-weight: 500;
 }
@@ -177,6 +178,7 @@ nav {
 
 /* Hero section styles */
 .hero {
+  position: relative;
   margin-top: 75px;
   padding: 20px 50px 0 50px;
   height: 100%;
@@ -185,25 +187,46 @@ nav {
 
 /* Hero section styles */
 .hero img {
+  display: block;
   width: 100%;
   height: 100%;
+  min-height: 480px;
   max-height: 580px;
   object-fit: cover;
   border-radius: 30px;
 }
 
+/* Overlay container — absolutely anchored over the image so the
+   headline + CTA stay aligned at any viewport width */
+.hero > div {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  top: 20px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  pointer-events: none;
+}
+
+/* Keep interactive elements clickable through the overlay */
+.hero > div a,
+.hero > div button {
+  pointer-events: auto;
+}
+
 /* Hero section styles */
 .hero .bigText {
-  /* position: absolute;
-  bottom: -75px; */
-  margin-left: -8px;
-  margin-top: -16vw;
+  margin: 32px 0 -28px;
   color: #fafafa;
-  /* font-size: 165px; */
-  font-size: 12vw;
+  /* Scales fluidly but clamped so it never overflows on wide screens */
+  font-size: clamp(40px, 12vw, 165px);
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.7rem;
+  letter-spacing: -0.07em;
+  line-height: 0.85;
   width: 100%;
   text-align: center;
 }
@@ -211,7 +234,6 @@ nav {
 /* Hero section styles */
 .hero .textButtonElement {
   font-size: 20px;
-  margin-top: -28vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -374,7 +396,7 @@ button p,
 
 /* About section styles */
 .aboutUs {
-  margin-top: 20vw;
+  margin-top: 60px;
   padding: 0 50px;
   display: flex;
   flex-direction: column;
@@ -1417,15 +1439,339 @@ footer {
 
 @media screen and (min-width: 1400px) {
   .hero .bigText {
-    font-size: 180px;
-    margin-top: -240px;
+    margin: 32px 0 -48px;
+    font-size: 165px;
+  }
+}
+
+/* ===================== RESPONSIVE / MOBILE NAV ===================== */
+
+/* Hamburger toggle button — hidden on desktop, shown on smaller screens */
+.navToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navToggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #171717;
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Animate hamburger into an "X" when open */
+.navToggle.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.navToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.navToggle.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* The in-menu CTA only appears in the mobile dropdown */
+.navButtonMobile {
+  display: none;
+}
+
+/* ===================== TABLET (<= 1024px) ===================== */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 16px 24px;
   }
 
+  nav {
+    padding: 0;
+  }
+
+  .navLinks {
+    gap: 24px;
+  }
+
+  /* About: stack columns */
+  .aboutContent {
+    flex-direction: column;
+  }
+  .aboutContentLeft,
+  .aboutContentRight {
+    width: 100%;
+  }
+
+  /* Stories: stack text over cards */
+  .storiesContent {
+    flex-direction: column;
+  }
+  .storiesContentLeft,
+  .storiesContentRight {
+    width: 100%;
+  }
+  .storiesContentLeft .arrows {
+    margin-top: 20px;
+  }
+
+  /* Contact: stack columns */
+  .contactContent {
+    flex-direction: column;
+  }
+  .contactContentLeft,
+  .contactContentRight {
+    width: 100%;
+  }
+
+  /* Footer: stack brand block over nav */
+  .topFooter {
+    flex-direction: column;
+  }
+  .topLeft,
+  .topRight {
+    width: 100%;
+  }
+}
+
+/* ===================== MOBILE NAV BREAKPOINT (<= 860px) ===================== */
+@media screen and (max-width: 860px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  .navToggle {
+    display: flex;
+  }
+
+  /* Desktop CTA hidden; CTA lives inside the dropdown instead */
+  .navButtonDesktop {
+    display: none;
+  }
+  .navButtonMobile {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  /* Collapsible dropdown menu */
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    background: #fafafa;
+    padding: 0 24px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition:
+      max-height 0.35s ease,
+      padding 0.35s ease;
+  }
+
+  .navLinks.open {
+    max-height: 420px;
+    padding: 12px 24px 20px;
+  }
+
+  .navLinks a {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+}
+
+/* ===================== MOBILE (<= 768px) ===================== */
+@media screen and (max-width: 768px) {
+  /* Reduce section side padding across the page */
+  .hero,
+  .aboutUs,
+  .stories,
+  .howYouCanHelp,
+  .contact {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  footer {
+    padding: 20px 24px;
+  }
+  .innerFooter {
+    padding: 28px 24px;
+  }
+  .outerFooter {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Shrink large headings */
+  .aboutContent .title,
+  .whyItMatters .title,
+  .stories .title,
+  .howYouCanHelp .title,
+  .contact .title {
+    font-size: 30px;
+  }
+
+  .aboutContent .description,
+  .whyItMatters .description,
+  .stories .description,
+  .howYouCanHelp .description,
+  .contact .description {
+    font-size: 18px;
+  }
+
+  .cardTitle {
+    font-size: 26px;
+  }
+
+  .topLeft .title {
+    font-size: 34px;
+  }
+
+  /* About card grid: single column */
+  .aboutContentRight {
+    flex-direction: column;
+  }
+
+  /* How You Can Help: single column */
+  .howYouCanHelpContent {
+    flex-direction: column;
+  }
+
+  /* Stories cards: stack vertically and reset any JS carousel offset */
+  .storiesContentRight {
+    flex-direction: column;
+    margin-left: 0 !important;
+  }
+  .storyCard {
+    min-width: 0;
+  }
+  /* Carousel arrows are not meaningful when cards stack */
+  .storiesContentLeft .arrows {
+    display: none;
+  }
+
+  /* Contact: stack name row and socials/hours */
+  .formRow {
+    flex-direction: column;
+  }
+  .socialsNBusiness {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .socials {
+    width: 100%;
+  }
+
+  /* Footer nav: stack the two link columns */
+  .topRight {
+    flex-direction: column;
+  }
+  .bottomFooter {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .socialsFooter {
+    justify-content: flex-start;
+  }
+
+  /* Hero: let the image grow taller so the overlay text fits */
+  .hero {
+    max-height: none;
+  }
+  .hero img {
+    min-height: 460px;
+    max-height: 520px;
+  }
+  .hero > div {
+    left: 24px;
+    right: 24px;
+    padding-bottom: 24px;
+  }
+  /* Hero overlay text gets a touch smaller for balance */
   .hero .textButtonElement {
-    margin-top: -400px;
+    font-size: 18px;
+    align-items: stretch;
+    padding-right: 0;
+  }
+  .hero .smallerText {
+    max-width: 100%;
+  }
+  .hero button,
+  .hero .btnAction {
+    max-width: 100%;
+  }
+}
+
+/* ===================== SMALL MOBILE (<= 480px) ===================== */
+@media screen and (max-width: 480px) {
+  .hero,
+  .aboutUs,
+  .stories,
+  .howYouCanHelp,
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .aboutUs {
-    margin-top: 250px;
+  /* Match hero overlay inset to the reduced side padding */
+  .hero > div {
+    left: 16px;
+    right: 16px;
+  }
+  .hero img {
+    min-height: 420px;
+    max-height: 480px;
+  }
+
+  .aboutContent .title,
+  .whyItMatters .title,
+  .stories .title,
+  .howYouCanHelp .title,
+  .contact .title {
+    font-size: 26px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .stats .number {
+    font-size: 30px;
+  }
+  .stats .text {
+    font-size: 18px;
+  }
+
+  .aboutContentRight .card {
+    padding: 24px;
+  }
+
+  /* Reduce smaller card chip text */
+  .cardChips p {
+    font-size: 16px;
+    padding: 5px 12px;
+  }
+
+  /* Footer brand title */
+  .topLeft .title {
+    font-size: 28px;
+  }
+
+  /* Stat columns slightly narrower so more fit on tiny screens */
+  .statisticsCol {
+    min-width: 170px;
+    min-height: 420px;
   }
 }
